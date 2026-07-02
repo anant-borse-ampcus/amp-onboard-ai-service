@@ -2,6 +2,7 @@ from app.config.config_manager import ConfigManager
 from app.core.exceptions import ConfigurationError, LLMProviderError
 from app.llm.base import BaseLLMProvider, LLMRequest, LLMResponse
 from app.llm.providers.groq_provider import GroqProvider
+from app.llm.providers.mock_provider import MockLLMProvider
 from app.llm.providers.openai_provider import OpenAIProvider
 
 
@@ -15,6 +16,8 @@ class LLMProviderFactory:
         """Instantiate the configured LLM provider."""
         provider = self._config_manager.llm_provider
 
+        if provider == "mock":
+            return MockLLMProvider(self._config_manager)
         if provider == "openai":
             return OpenAIProvider(self._config_manager)
         if provider == "groq":
@@ -22,7 +25,7 @@ class LLMProviderFactory:
 
         raise ConfigurationError(
             message=f"Unsupported LLM provider: {provider}",
-            details={"supported_providers": ["openai", "groq"]},
+            details={"supported_providers": ["mock", "openai", "groq"]},
         )
 
     async def generate(self, request: LLMRequest) -> LLMResponse:

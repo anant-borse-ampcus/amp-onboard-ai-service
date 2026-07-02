@@ -23,6 +23,15 @@ class OrganizationUpdateRequest(BaseModel):
     support_email: str | None = None
 
 
+class PublicBrandingResponse(BaseModel):
+    """Public branding fields for login and app shell theming."""
+
+    name: str
+    description: str
+    primary_color: str
+    logo_url: str
+
+
 # --- AI Configuration --- #
 class AIConfigResponse(BaseModel):
     id: str

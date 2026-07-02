@@ -28,11 +28,23 @@ class Settings(BaseSettings):
 
     log_level: str = Field(default="INFO", alias="LOG_LEVEL")
 
-    llm_provider: Literal["openai", "groq"] = Field(default="openai", alias="LLM_PROVIDER")
+    llm_provider: Literal["openai", "groq", "mock"] = Field(
+        default="mock", alias="LLM_PROVIDER"
+    )
     openai_api_key: str = Field(default="", alias="OPENAI_API_KEY")
     openai_model: str = Field(default="gpt-4o-mini", alias="OPENAI_MODEL")
     groq_api_key: str = Field(default="", alias="GROQ_API_KEY")
     groq_model: str = Field(default="llama-3.3-70b-versatile", alias="GROQ_MODEL")
+
+    jwt_secret: str = Field(
+        default="dev-change-me-in-production-use-32-chars-min",
+        alias="JWT_SECRET",
+    )
+    jwt_algorithm: str = Field(default="HS256", alias="JWT_ALGORITHM")
+    jwt_access_token_expire_minutes: int = Field(
+        default=60 * 24,
+        alias="JWT_ACCESS_TOKEN_EXPIRE_MINUTES",
+    )
 
     @property
     def is_development(self) -> bool:

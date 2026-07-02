@@ -30,6 +30,20 @@ class ValidationError(AppException):
         )
 
 
+class ConflictError(AppException):
+    """Raised when a resource conflicts with existing state."""
+
+    def __init__(
+        self, message: str = "Resource conflict", details: dict[str, Any] | None = None
+    ) -> None:
+        super().__init__(
+            message=message,
+            status_code=409,
+            error_code="CONFLICT",
+            details=details,
+        )
+
+
 class NotFoundError(AppException):
     """Raised when a requested resource is not found."""
 
