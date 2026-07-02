@@ -1,0 +1,50 @@
+[
+  {
+    "id": "vpn-setup",
+    "keywords": ["vpn", "remote access", "connect", "network"],
+    "title": "IT Setup Guide",
+    "url": "/docs/it-setup",
+    "excerpt": "VPN setup instructions for remote access",
+    "answer": "Connect to the corporate VPN using the IT-provided client. Your credentials are in the welcome email. Download the VPN client from the IT portal and follow the setup wizard."
+  },
+  {
+    "id": "benefits",
+    "keywords": ["benefits", "health insurance", "enrollment", "hr"],
+    "title": "HR Benefits Portal",
+    "url": "/docs/benefits",
+    "excerpt": "Benefits enrollment guide",
+    "answer": "Benefits enrollment opens on your first day. Visit the HR portal within 30 days to select your health, dental, and vision plans. Contact HR at benefits@company.com for questions."
+  },
+  {
+    "id": "onboarding-buddy",
+    "keywords": ["buddy", "mentor", "who", "contact", "help"],
+    "title": "Onboarding Handbook",
+    "url": "/docs/onboarding",
+    "excerpt": "Buddy program details",
+    "answer": "Your onboarding buddy is assigned by your manager and listed in your welcome email. They are your go-to person for questions during your first 30 days."
+  },
+  {
+    "id": "documentation",
+    "keywords": ["documentation", "wiki", "docs", "resources", "knowledge"],
+    "title": "Team Wiki",
+    "url": "/wiki",
+    "excerpt": "Getting started guide",
+    "answer": "Team documentation is available on the internal wiki. Start with the 'Getting Started' section in your team's space. Ask your buddy for the direct link to your team's wiki page."
+  },
+  {
+    "id": "dev-environment",
+    "keywords": ["setup", "environment", "install", "ide", "tools", "laptop"],
+    "title": "Developer Setup Guide",
+    "url": "/docs/dev-setup",
+    "excerpt": "Development environment setup",
+    "answer": "Follow the Developer Setup Guide to configure your IDE, install required tools, and clone repositories. IT will provide your laptop and access credentials on Day 1."
+  },
+  {
+    "id": "pto",
+    "keywords": ["pto", "vacation", "leave", "time off", "holiday"],
+    "title": "HR Policy Handbook",
+    "url": "/docs/hr-policies",
+    "excerpt": "PTO and leave policies",
+    "answer": "PTO accrual begins from your start date. Review the HR Policy Handbook for accrual rates and request procedures. Submit PTO requests through the HR portal."
+  }
+]
